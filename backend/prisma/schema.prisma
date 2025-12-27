@@ -91,7 +91,6 @@ model Candidate {
   resumes         Resume[]
   applications    Application[]
 
-  @@index([email])
   @@index([lastName, firstName])
   @@map("Candidate")
 }
@@ -213,7 +212,6 @@ model InterviewType {
   // Relaciones
   interviewSteps         InterviewStep[]
 
-  @@index([name])
   @@index([isActive])
   @@map("InterviewType")
 }
@@ -255,7 +253,6 @@ model InterviewStep {
   @@unique([interviewFlowId, orderIndex])
   @@index([interviewFlowId])
   @@index([interviewTypeId])
-  @@index([interviewFlowId, orderIndex])
   @@map("InterviewStep")
 }
 

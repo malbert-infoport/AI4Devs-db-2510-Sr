@@ -216,9 +216,6 @@ CREATE TABLE "Interview" (
 CREATE UNIQUE INDEX "Candidate_email_key" ON "Candidate"("email");
 
 -- CreateIndex
-CREATE INDEX "Candidate_email_idx" ON "Candidate"("email");
-
--- CreateIndex
 CREATE INDEX "Candidate_lastName_firstName_idx" ON "Candidate"("lastName", "firstName");
 
 -- CreateIndex
@@ -261,9 +258,6 @@ CREATE UNIQUE INDEX "Employee_company_id_email_key" ON "Employee"("company_id", 
 CREATE UNIQUE INDEX "InterviewType_name_key" ON "InterviewType"("name");
 
 -- CreateIndex
-CREATE INDEX "InterviewType_name_idx" ON "InterviewType"("name");
-
--- CreateIndex
 CREATE INDEX "InterviewType_is_active_idx" ON "InterviewType"("is_active");
 
 -- CreateIndex
@@ -277,9 +271,6 @@ CREATE INDEX "InterviewStep_interview_flow_id_idx" ON "InterviewStep"("interview
 
 -- CreateIndex
 CREATE INDEX "InterviewStep_interview_type_id_idx" ON "InterviewStep"("interview_type_id");
-
--- CreateIndex
-CREATE INDEX "InterviewStep_interview_flow_id_order_index_idx" ON "InterviewStep"("interview_flow_id", "order_index");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "InterviewStep_interview_flow_id_order_index_key" ON "InterviewStep"("interview_flow_id", "order_index");
